@@ -1,7 +1,7 @@
 // ---- Edit your products here ----
 // Put your own photos in the images folder and change the "img" path.
 const products = [
-  { id: 1, name: "Ceramic mug",     price: 299,  img: "images/Mug-new.jpg",        tag: "Bestseller", desc: "Hand-finished mug that keeps your tea warm longer." },
+  { id: 1, name: "Ceramic mug",     price: 299,  img: "Mug-new.jpg",        tag: "Bestseller", desc: "Hand-finished mug that keeps your tea warm longer." },
   { id: 2, name: "Cotton t-shirt",  price: 499,  img: "images/product-tshirt.svg",     tag: "",           desc: "Soft, breathable and made for everyday wear." },
   { id: 3, name: "Canvas backpack", price: 1299, img: "images/product-backpack.svg",   tag: "New",        desc: "Roomy, sturdy and ready for work or travel." },
   { id: 4, name: "Table lamp",      price: 899,  img: "images/product-lamp.svg",       tag: "",           desc: "Warm light for your desk or bedside." },
