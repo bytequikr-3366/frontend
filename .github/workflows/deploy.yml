@@ -1,0 +1,42 @@
+name: Deploy Frontend to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::595083028893:role/github-actions-frontend-role
+          aws-region: ap-south-1
+
+      - name: Deploy to EC2 through SSM
+        run: |
+          aws ssm send-command \
+            --instance-ids i-0b9213d58f335e3ae \
+            --document-name "AWS-RunShellScript" \
+            --comment "Deploy frontend from GitHub Actions" \
+            --parameters 'commands=[
+              "cd /tmp",
+              "rm -rf frontend-deploy",
+              "git clone https://github.com/bytequikr-3366/frontend.git frontend-deploy",
+              "sudo rm -rf /mnt/frontend/app/*",
+              "sudo cp -r /tmp/frontend-deploy/files/* /mnt/frontend/app/",
+              "sudo chown -R www-data:www-data /mnt/frontend/app",
+              "sudo nginx -t",
+              "sudo systemctl reload nginx"
+            ]' \
+            --region ap-south-1
