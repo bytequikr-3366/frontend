@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hearth &amp; Hue | Everyday things for your home</title>
+  <meta name="description" content="Hearth & Hue: simple, well-made things for your home and everyday life.">
+  <link rel="icon" href="images/logo-icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a href="#" class="brand"><img src="images/logo.svg" alt="Hearth & Hue" height="40"></a>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#about">Our story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="cart-btn" aria-label="Open cart">Cart (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Things that make a house feel like yours.</h2>
+      <p>Simple, well-made essentials for your home and your day, chosen with care and priced fairly.</p>
+      <a class="btn" href="#shop">Shop the collection</a>
+    </div>
+    <img src="images/hero.svg" alt="A shelf with a lamp, a mug, a notebook and a plant">
+  </section>
+
+  <section class="perks">
+    <div><strong>Free delivery</strong><span>On orders above ₹999</span></div>
+    <div><strong>Easy returns</strong><span>Within 7 days</span></div>
+    <div><strong>Secure payment</strong><span>UPI, cards and cash on delivery</span></div>
+  </section>
+
+  <main id="shop">
+    <h2>Our collection</h2>
+    <section id="products" class="grid"></section>
+  </main>
+
+  <section id="about" class="about">
+    <div>
+      <h2>Our story</h2>
+      <p>Hearth &amp; Hue started with a simple idea: everyday things should be good to look at and good to use. We pick a small range of items, test them at home, and only sell what we would keep ourselves.</p>
+    </div>
+    <ul>
+      <li><strong>Chosen with care</strong> Every item is tried before it is listed.</li>
+      <li><strong>Fair prices</strong> No fake discounts, just honest pricing.</li>
+      <li><strong>Made to last</strong> Materials we trust to hold up.</li>
+    </ul>
+  </section>
+
+  <footer id="contact">
+    <img src="images/logo-light.svg" alt="Hearth & Hue" height="36">
+    <div>
+      <p><strong>Contact us</strong></p>
+      <p>hello@hearthandhue.example</p>
+      <p>+91 00000 00000</p>
+      <p>Mon–Sat, 10am to 6pm</p>
+    </div>
+    <div>
+      <p><strong>Follow us</strong></p>
+      <p><a href="#">Instagram</a></p>
+      <p><a href="#">Facebook</a></p>
+      <p><a href="#">WhatsApp</a></p>
+    </div>
+    <p class="copy">© <span id="year"></span> Hearth &amp; Hue. All rights reserved.</p>
+  </footer>
+
+  <aside id="cart" class="cart" aria-label="Shopping cart">
+    <div class="cart-head">
+      <h2>Your cart</h2>
+      <button id="close-cart" aria-label="Close cart">✕</button>
+    </div>
+    <ul id="cart-items"></ul>
+    <p id="empty" class="empty">Your cart is empty. Add something from the collection.</p>
+    <div class="cart-foot">
+      <p>Total: <strong id="total">₹0</strong></p>
+      <button id="checkout" class="primary">Check out</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
