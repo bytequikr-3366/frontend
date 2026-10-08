@@ -4,9 +4,9 @@ const products = [
   { id: 1, name: "Ceramic mug",     price: 299,  img: "Mug-new.jpg",    tag: "Bestseller", desc: "Hand-finished mug that keeps your tea warm longer." },
   { id: 2, name: "Cotton t-shirt",  price: 499,  img: "Tshirt.jpg",     tag: "Trend",      desc: "Soft, breathable and made for everyday wear." },
   { id: 3, name: "Canvas backpack", price: 1299, img: "BackPack.jpg",   tag: "New",        desc: "Roomy, sturdy and ready for work or travel." },
-  { id: 4, name: "Table lamp",      price: 899,  img: "Table Lamp.jpg", tag: "Flash",      desc: "Warm light for your desk or bedside." },
+  { id: 4, name: "Table lamp",      price: 899,  img: "Tablelamp.jpg",  tag: "Flash",      desc: "Warm light for your desk or bedside." },
   { id: 5, name: "Notebook",        price: 149,  img: "Notebook.jpg",   tag: "Bestseller", desc: "Thick pages and a hard cover that lasts." },
-  { id: 6, name: "Sunglasses",      price: 699,  img: "SunGlass.jpg",   tag: "New",        desc: "Light frames with UV protection." },
+  { id: 6, name: "Sunglasses",      price: 699,  img: "Sunglass.jpg",   tag: "New",        desc: "Light frames with UV protection." },
 ];
 
 let cart = JSON.parse(localStorage.getItem("cart") || "{}");
